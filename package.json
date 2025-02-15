@@ -1,0 +1,42 @@
+{
+  "name": "jwt-auth",
+  "version": "1.0.0",
+  "description": "A fully functional JWT authentication library for securely generating, verifying, and managing JSON Web Tokens.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrangB/jwt-auth.git"
+  },
+  "keywords": [
+    "jwt",
+    "authentication",
+    "authorization",
+    "jsonwebtoken",
+    "security",
+    "access-token",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "brangtsawmaung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrangB/jwt-auth/issues"
+  },
+  "homepage": "https://github.com/BrangB/jwt-auth#readme",
+  "devDependencies": {
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@types/jsonwebtoken": "^9.0.8",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
