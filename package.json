@@ -1,6 +1,6 @@
 {
   "name": "jwt-auths",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A fully functional JWT authentication library for securely generating, verifying, and managing JSON Web Tokens.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
