@@ -1,8 +1,20 @@
 const jwt = require('jsonwebtoken');
 
-export const createRefreshToken = (jwtsecret: String, expiredDate: String = '7d', payload: any, algorithm:String = 'HS256'):String => {
-    return jwt.sign(payload, jwtsecret, {
-        algorithm: algorithm,
-        expiresIn: expiredDate,
-    });
+type Payload = string | object | Buffer;
+
+interface TokenOptions {
+  expiresIn?: string | number;
+  algorithm?: Algorithm | string;
 }
+
+const defaultRefreshTokenOptions: TokenOptions = {
+  expiresIn: '7d',
+  algorithm: 'HS256',
+};
+
+export const createRefreshToken = (secret: string, payload: Payload,options: TokenOptions = defaultRefreshTokenOptions): string => {
+  return jwt.sign(payload, secret, {
+    algorithm: options.algorithm,
+    expiresIn: options.expiresIn,
+  });
+};
